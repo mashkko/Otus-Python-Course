@@ -1,11 +1,11 @@
 # New class declaration
 class Figure:
     def __init__(self, name: str):
-        self.f_name = name
-        self.f_area = 0
-        self.f_perimeter = 0
+        self.__name = name
+        self.__area = 0
+        self.__perimeter = 0
 
-# Вычисление суммы фигур
+    # Вычисление суммы фигур
     def add_area(self, figure):
         if isinstance(figure, Figure):
             return figure.area + self.area
@@ -14,24 +14,24 @@ class Figure:
 
     @property
     def name(self):
-        return self.f_name
+        return self.__name
 
     @property
     def area(self):
-        return self.f_area
+        return self.__area
 
     @property
     def perimeter(self):
-        return self.f_perimeter
+        return self.__perimeter
 
-    @name.setting
+    @name.setter
     def name(self, value):
-        self.f_name = value
+        self.__name = value
 
     @area.setter
     def area(self, value):
-        self.f_area = value
+        self.__area = value
 
     @perimeter.setter
     def perimeter(self, value):
-        self.f_perimeter = value
+        self.__perimeter = value

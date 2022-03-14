@@ -1,0 +1,7 @@
+[flake8]
+max-line-length = 120
+exclude =
+    .pytest_cache,
+    env
+max-complexity = 20
+import-order-style = google

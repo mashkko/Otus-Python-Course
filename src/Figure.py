@@ -10,7 +10,7 @@ class Figure:
         if isinstance(figure, Figure):
             return figure.area + self.area
         else:
-            raise ValueError("передан неправильный класс")
+            raise ValueError("Передан неправильный класс")
 
     @property
     def name(self):
